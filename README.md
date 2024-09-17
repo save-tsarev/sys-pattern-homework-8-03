@@ -137,7 +137,7 @@
 
 ![Авторизация в Zabbix](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie1_login.png)
 
-##Задание 2
+## Задание 2
 
 Шаг 1: Установка Zabbix Agent
 
@@ -232,7 +232,11 @@
    sudo tail -f /var/log/zabbix/zabbix_agentd.log
 
 ![Узлы сети](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agents.png)
+
 ![Лог с первого агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog1.png
+
 ![Лог со второго агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog2.png
+
 ![Мониторинг 1 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring1.png
+
 ![Мониторинг 2 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring2.png
