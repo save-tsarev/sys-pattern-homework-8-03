@@ -137,3 +137,102 @@
 
 ![Авторизация в Zabbix](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie1_login.png)
 
+##Задание 2
+
+Шаг 1: Установка Zabbix Agent
+
+1. **Установите Zabbix Agent на оба хоста**:
+   - Один из хостов может быть вашим Zabbix Server.
+   - Используйте следующие команды для установки Zabbix Agent на каждом из хостов (например, на Ubuntu):
+
+   **Для Zabbix Server и второго хоста**:
+   
+   1. **Добавьте репозиторий Zabbix**:
+   
+      ```bash
+      wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu20.04_all.deb
+      sudo dpkg -i zabbix-release_6.0-4+ubuntu20.04_all.deb
+      sudo apt update
+      ```
+
+   2. **Установите Zabbix Agent**:
+   
+      ```bash
+      sudo apt install zabbix-agent
+      ```
+
+2. **Настройте Zabbix Agent**:
+   
+   После установки нужно настроить Zabbix Agent. Откройте файл конфигурации:
+
+   ```bash
+   sudo vim /etc/zabbix/zabbix_agentd.conf
+   ```
+
+   - В файле найдите строку `Server=` и укажите IP адрес вашего Zabbix Server:
+     
+     ```
+     Server=IP_адрес_вашего_Zabbix_Server
+     ```
+
+   - Также настройте `ServerActive=` с тем же IP:
+     
+     ```
+     ServerActive=IP_адрес_вашего_Zabbix_Server
+     ```
+
+   - В строке `Hostname=` укажите уникальное имя для каждого агента:
+     
+     ```
+     Hostname=имя_вашего_хоста
+     ```
+
+3. **Запустите и включите агент**:
+
+   Запустите и убедитесь, что агент автоматически запускается при загрузке:
+
+   ```bash
+   sudo systemctl restart zabbix-agent
+   sudo systemctl enable zabbix-agent
+   ```
+
+4. **Проверьте статус агента**:
+
+   Убедитесь, что Zabbix Agent работает корректно:
+
+   ```bash
+   sudo systemctl status zabbix-agent
+   ```
+
+### Шаг 2: Настройка агентов на Zabbix Server
+
+1. **Добавьте хосты в Zabbix Server**:
+
+   - Зайдите в веб-интерфейс Zabbix Server.
+   - Перейдите в раздел **Configuration > Hosts**.
+   - Нажмите на **Create host** и добавьте оба хоста:
+     - Укажите имя хоста.
+     - Укажите IP-адрес хоста.
+     - Убедитесь, что выбран правильный шаблон для Zabbix Agent (например, **Template OS Linux by Zabbix agent**).
+
+2. **Проверьте подключение**:
+
+   После добавления хостов перейдите в раздел **Monitoring > Latest Data** и убедитесь, что данные с агентов поступают.
+
+### Шаг 3: Сбор данных и проверка
+
+1. **Проверьте данные в разделе "Latest Data"**:
+   - Перейдите в **Monitoring > Latest Data** и убедитесь, что данные с обоих агентов поступают.
+
+2. **Проверьте лог Zabbix Agent**:
+   
+   На каждом хосте выполните команду для просмотра лога агента:
+   
+   ```bash
+   sudo tail -f /var/log/zabbix/zabbix_agentd.log
+
+![Узлы сети](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agents.png)
+![Лог с первого агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog1.png
+![Лог со второго агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog2.png
+![Мониторинг 1 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring1.png
+![Мониторинг 2 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring2.png
