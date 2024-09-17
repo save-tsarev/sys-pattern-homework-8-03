@@ -133,10 +133,7 @@
 
    - Логин: `Admin`
    - Пароль: `zabbix`
-<<<<<<< HEAD
-=======
 
 
 ![Авторизация в Zabbix](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie1_login.png)
 
->>>>>>> 9cc2833 (Сохранил изменения перед rebase)
