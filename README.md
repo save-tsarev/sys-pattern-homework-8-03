@@ -233,10 +233,10 @@
 
 ![Узлы сети](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agents.png)
 
-![Лог с первого агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog1.png
+![Лог с первого агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog1.png)
 
-![Лог со второго агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog2.png
+![Лог со второго агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentlog2.png)
 
-![Мониторинг 1 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring1.png
+![Мониторинг 1 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring1.png)
 
-![Мониторинг 2 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring2.png
+![Мониторинг 2 агента](https://github.com/save-tsarev/sys-pattern-homework-8-03/blob/main/img/zadanie2_agentmonitoring2.png)
